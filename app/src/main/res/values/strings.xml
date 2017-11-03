@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ex2</string>
     <string name="intro">This exercise demonstrates  the: Acrivity life-cycle callback methods, views refrencing, and On-click handler</string>
+     <string name="textin">enter here your first name</string>
+    <string name="button">Try me!</string>
     <string name="name">Name:</string>
-
 </resources>
