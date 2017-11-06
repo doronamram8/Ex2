@@ -47,10 +47,8 @@
         android:text="@string/button"
         android:textStyle="bold"
         android:fontFamily="serif"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
         android:onClick="buttonClicked"
-        />
+        android:layout_below="@+id/edtext"
+        android:layout_centerHorizontal="true" />
 
  </RelativeLayout >

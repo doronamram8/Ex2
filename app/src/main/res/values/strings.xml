@@ -4,4 +4,19 @@
      <string name="textin">enter here your first name</string>
     <string name="button">Try me!</string>
     <string name="name">Name:</string>
+    <string name="Mytag">Ex2.MainActivity</string>
+    <string name="create">onCreateEvent</string>
+    <string name="Toastintro">Welcome Doron, this is your first java coding experience in Android congratulations!!!</string>
+    <string name="start">onStartEvent</string>
+    <string name="Resume">onResumeEvent</string>
+    <string name="pause">onPauseEvent</string>
+    <string name="stop">onStopEvent</string>
+    <string name="destroy">onDestroyEvent</string>
+    <string name="Toastentername">you must enter a name</string>
+    <string name="buttonclicked">Doron, you clicked The buuton  </string>
+    <string name="times"> times</string>
+    <string name="onsaved">onSavedEvent</string>
+    <string name="onRestore">onRestoreEvent</string>
+
 </resources>
+

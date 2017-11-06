@@ -16,46 +16,67 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i(MY_TAG,"onCreateEvent");
-        Toast.makeText(this, "Welcome Doron, this is your first java coding experience in Android congratulations!!!", Toast.LENGTH_LONG).show();
+        Log.i(MY_TAG, getString(R.string.create));
+        if(savedInstanceState==null){
+            Toast.makeText(this, getString(R.string.Toastintro), Toast.LENGTH_SHORT).show();
+        }
 
     }
+
+
 
     @Override
     protected void onStart() {
         super.onStart();
-    Log.i(MY_TAG,"onStartEvent");
+    Log.i(MY_TAG,getString(R.string.start));
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-     Log.i(MY_TAG,"onResumeEvent");
+     Log.i(MY_TAG,getString(R.string.start));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-     Log.i(MY_TAG,"onPauseEvent");
+     Log.i(MY_TAG,getString(R.string.pause));
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(MY_TAG,"onStopEvent");
+        Log.i(MY_TAG,getString(R.string.stop));
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(MY_TAG,"onDestroyEvent");
+        Log.i(MY_TAG,getString(R.string.destroy));
     }
     public void buttonClicked(View v){
-            EditText edName=(EditText) findViewById(R.id.edtext);
+         EditText edName=(EditText) findViewById(R.id.edtext);
             if(edName.getText().length()==0)
-                Toast.makeText(this, "you must enter a name", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.Toastentername), Toast.LENGTH_LONG).show();
         else
-            cnt++;
-        Toast.makeText(this,"Doron, you clicked The buuton "+cnt+" times",Toast.LENGTH_LONG ).show();
+                this.cnt++;
+        Toast.makeText(this, getString(R.string.buttonclicked) +cnt+getString(R.string.times),Toast.LENGTH_LONG ).show();
     }
-}
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("cnt",this.cnt);
+        Log.i( MY_TAG,getString(R.string.onsaved));
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if(savedInstanceState!=null){
+            this.cnt=savedInstanceState.getInt("cnt",this.cnt);
+        }
+         Log.i(MY_TAG, getString(R.string.onRestore));
+    }
+
+    }
